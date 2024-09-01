@@ -10,18 +10,18 @@ const Navbar = (props) => {
   let userFirstName = props.userFirstName;
 
   return (
-    <div className="flex justify-between items-center w-11/12 max-w-[1160px] py-2 mx-auto  ">
+    <div className="flex justify-between items-center w-11/12 max-w-[1360px] py-2 mx-auto   ">
       <Link to="/">
         <img
           src={Logo}
           alt="logo"
-          width={300}
+          width={280}
           height={32}
           loading="lazy"
         />
       </Link>
       <nav>
-        <ul className="flex gap-5 text-white">
+        <ul className="flex gap-x-10   text-xl text-white ">
           <li>
             <NavLink to="/"> Home</NavLink>
           </li>
@@ -34,15 +34,15 @@ const Navbar = (props) => {
         </ul>
       </nav>
 
-      <div className="flex gap-7 text-white">
+      <div className="flex gap-x-6   ">
         {!isLoggedIn && (
           <Link to="./login">
-            <button>Login</button>
+            <button className="bg-[#161D29] border border-[#2C333F] rounded-[8px]  px-[12px] py-[8px] text-[#AFB2BF]">Log in</button>
           </Link>
         )}
         {!isLoggedIn && (
           <Link to="./signup">
-            <button>Signup</button>
+            <button className="bg-[#161D29] border border-[#2C333F] rounded-[8px]  px-[12px] py-[8px] text-[#AFB2BF]">Sign Up</button>
           </Link>
         )}
         {isLoggedIn && (
@@ -65,6 +65,7 @@ const Navbar = (props) => {
                   },
                 });
               }}
+              className="bg-[#161D29] border border-[#2C333F] rounded-[8px]  px-[12px] py-[8px] text-[#AFB2BF]"
             >
               Logout
             </button>
@@ -72,7 +73,7 @@ const Navbar = (props) => {
         )}
         {isLoggedIn && (
           <Link to="./dashboard">
-            <button>Welcome {userFirstName} </button>
+            <button className="bg-[#5b5c5e] border border-[#2C333F] rounded-[8px]  px-[12px] py-[8px] text-white" >Welcome {userFirstName} </button>
           </Link>
         )}
       </div>

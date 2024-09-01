@@ -2,7 +2,7 @@ import React from 'react'
 
 const Dashboard = ({userFirstName}) => {
   return (
-    <div className='flex justify-center items-center  text-white'>Welcome to CollegeAurCode {userFirstName} </div>
+    <div className='flex justify-center items-center h-screen text-white text-2xl'>Welcome to CollegeAurCode {userFirstName} ! </div>
   )
 }
 
