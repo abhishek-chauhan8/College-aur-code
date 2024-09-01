@@ -47,8 +47,15 @@ const SignupForm = ({ setIsLoggedIn, setUserFirstName }) => {
         textAlign: "center",
       },
     });
-    console.log(formData);
-    console.log(accountType);
+    const accountData = {
+      ...formData
+    }
+
+    const finalData = {
+      ...accountData,
+      accountType
+    }
+    console.log(finalData)
     setUserFirstName(formData.firstName);
     navigate("/dashboard");
   }
